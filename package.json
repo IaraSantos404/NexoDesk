@@ -12,11 +12,14 @@
   "dependencies": {
     "@hookform/resolvers": "^5.9.2",
     "@tailwindcss/vite": "^4.3.3",
+    "@tanstack/react-query": "^5.105.0",
+    "axios": "^1.21.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-hook-form": "^7.91.0",
     "react-icons": "^5.7.0",
     "react-router-dom": "^7.18.4",
+    "sonner": "^2.0.8",
     "tailwindcss": "^4.3.3",
     "zod": "^4.6.7"
   },
@@ -30,8 +33,14 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.7",
     "globals": "^17.13.0",
+    "msw": "^3.0.3",
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.71.2",
     "vite": "^8.3.4"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }

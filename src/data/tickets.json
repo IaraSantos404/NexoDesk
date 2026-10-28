@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "title": "Computador não liga",
+    "description": "Ao pressionar o botão de energia, nada acontece. Já testei outra tomada.",
+    "requester": "Mariana Souza",
+    "email": "",
+    "sector": "TI",
+    "priority": "Alta",
+    "status": "Aberto",
+    "createdAt": "2026-10-20T09:15:00.000Z",
+    "updatedAt": "2026-10-20T09:15:00.000Z"
+  },
+  {
+    "id": "2",
+    "title": "Sem acesso ao sistema financeiro",
+    "description": "Aparece erro de permissão ao tentar abrir o módulo de relatórios.",
+    "requester": "Carlos Lima",
+    "email": "",
+    "sector": "Financeiro",
+    "priority": "Média",
+    "status": "Em andamento",
+    "createdAt": "2026-10-21T14:30:00.000Z",
+    "updatedAt": "2026-10-22T08:00:00.000Z"
+  },
+  {
+    "id": "3",
+    "title": "Impressora do 2º andar offline",
+    "description": "A impressora não aparece na lista de dispositivos desde ontem.",
+    "requester": "Fernanda Alves",
+    "email": "",
+    "sector": "Operações",
+    "priority": "Baixa",
+    "status": "Concluído",
+    "createdAt": "2026-10-18T11:00:00.000Z",
+    "updatedAt": "2026-10-19T16:45:00.000Z"
+  }
+]
