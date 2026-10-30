@@ -1,6 +1,5 @@
 // src/mocks/handlers.ts
 import { http, HttpResponse, delay } from "msw";
-import seed from "@/data/tickets.json";
 import type {Ticket} from "@/types/ticket";
 
 
@@ -13,7 +12,8 @@ const load = (): Ticket[] => {
   } catch (error) {
     console.error("Erro ao carregar chamados do localStorage:", error);
   }
-  return seed as Ticket[];
+  // Para testar com dados mockados, basta retornar o conteúdo de tickets.json aqui.
+  return [];
 };
 
 const save = () => localStorage.setItem(KEY, JSON.stringify(tickets));

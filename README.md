@@ -204,8 +204,11 @@ Os endpoints são definidos em
 | `DELETE` | `/tickets/:id` | Excluir chamado |
 
 O MSW é iniciado antes da renderização da aplicação em
-[`main.tsx`](./src/main.tsx). Os dados iniciais estão em
-[`tickets.json`](./src/data/tickets.json).
+[`main.tsx`](./src/main.tsx). A API simulada começa vazia para que novos
+usuários não recebam chamados pré-cadastrados. Os exemplos permanecem
+disponíveis em [`tickets.json`](./src/data/tickets.json); para testar com
+dados mockados, basta retornar o conteúdo desse arquivo no método `load` de
+[`handlers.ts`](./src/mocks/handlers.ts).
 
 ## Formato do chamado
 
@@ -248,8 +251,8 @@ O mock usa a chave `nexodesk:tickets` no `localStorage`. Isso permite que
 chamados criados, atualizados ou excluídos permaneçam disponíveis durante novas
 aberturas da aplicação no mesmo navegador.
 
-Para restaurar os dados iniciais manualmente, remova a chave pelo console do
-navegador:
+Para limpar os chamados persistidos manualmente, remova a chave pelo console
+do navegador:
 
 ```js
 localStorage.removeItem('nexodesk:tickets')
