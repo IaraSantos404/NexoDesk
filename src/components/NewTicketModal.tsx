@@ -37,7 +37,7 @@ export default function NewTicketModal({ isOpen, onClose }: NewTicketModalProps)
         aria-modal="true"
         aria-labelledby="new-ticket-title"
         aria-describedby="new-ticket-description"
-        className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-6 shadow-2xl dark:bg-slate-900"
+        className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-4 shadow-2xl sm:p-6 dark:bg-slate-900"
       >
         <div className="flex items-start justify-between gap-4">
           <div>
@@ -152,18 +152,18 @@ export default function NewTicketModal({ isOpen, onClose }: NewTicketModalProps)
             </SelectField>
           </div>
 
-          <div className="flex justify-end gap-3 pt-2">
+          <div className="flex flex-col-reverse gap-3 pt-2 sm:flex-row sm:justify-end">
             <button
               type="button"
               onClick={handleClose}
-              className="rounded-lg cursor-pointer border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800"
+              className="w-full rounded-lg cursor-pointer border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 sm:w-auto dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800"
             >
               Cancelar
             </button>
             <button
               type="submit"
               disabled={isSubmitting}
-              className="rounded-lg bg-blue-700 cursor-pointer px-4 py-2.5 text-sm font-semibold text-white hover:bg-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              className="w-full rounded-lg bg-blue-700 cursor-pointer px-4 py-2.5 text-sm font-semibold text-white hover:bg-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
             >
               {isSubmitting ? 'Salvando...' : 'Criar chamado'}
             </button>
@@ -173,5 +173,4 @@ export default function NewTicketModal({ isOpen, onClose }: NewTicketModalProps)
     </div>
   )
 }
-
 

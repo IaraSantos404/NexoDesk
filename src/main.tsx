@@ -9,7 +9,7 @@ const queryClient = new QueryClient()
 
 async function enableMocking() {
   const { worker } = await import('./mocks/browser')
-  return worker.start({ onUnhandledRequest: 'error' })
+  return worker.start()
 }
 
 enableMocking().then(() => {

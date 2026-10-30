@@ -10,7 +10,7 @@ interface InfoCardProps {
 export default function InfoCard({ title, icon, number }: InfoCardProps) {
   return (
     <article className="group flex min-w-0 flex-1 items-center gap-4 justify-between
-    rounded-2xl border border-slate-200/80 bg-white/90 p-5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg dark:border-slate-700/80 dark:bg-slate-900/70 dark:hover:border-blue-500/70">
+    rounded-2xl border border-slate-200/80 bg-white/90 p-5 shadow-sm transition-all duration-200  hover:border-blue-300 hover:shadow-lg dark:border-slate-700/80 dark:bg-slate-900/70 dark:hover:border-blue-500/70">
       <div className="min-w-0">
         <p className="truncate text-sm font-medium text-slate-500 dark:text-slate-400">
           {title}

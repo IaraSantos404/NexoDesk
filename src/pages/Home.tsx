@@ -40,27 +40,27 @@ export default function Home() {
   ]
 
   return (
-    <section className=" items-center justify-center" id="center">
+    <section className="min-h-screen w-full" id="center">
       <Header />
 
-      <div className="flex flex-col w-8/12 m-auto">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-8">
+      <main className="mx-auto flex w-full max-w-7xl flex-col px-4 pt-20 sm:px-6 sm:pt-24 lg:px-8">
+        <div className="flex flex-col items-start justify-between gap-4 py-6 sm:flex-row sm:items-center sm:py-8">
           <div>
-            <h1 className="text-3xl font-extrabold text-gray-800 dark:text-gray-100 tracking-tight">
+            <h1 className="text-2xl font-extrabold tracking-tight text-gray-800 dark:text-gray-100 sm:text-3xl">
               Central de Chamados
             </h1>
             <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
               Acompanhe, gerencie e crie novos chamados para a sua equipe
             </p>
           </div>
-          <NewTicketButton onClick={() => setIsNewTicketModalOpen(true)} />
+          <NewTicketButton className="w-full sm:w-auto" onClick={() => setIsNewTicketModalOpen(true)} />
         </div>
-        <div className="flex flex-wrap justify-between gap-4 mb-10">
+        <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:mb-10 lg:grid-cols-4">
           {cards.map((card, index) => (
             <InfoCard key={index} title={card.title} icon={card.icon} number={card.number} />
           ))}
         </div>
-        <div className="w-full space-y-5">
+        <div className="w-full space-y-5 pb-8">
           <div className="rounded-2xl border border-slate-200/80 bg-white/70 p-5 dark:border-slate-700/80 dark:bg-slate-900/40">
             <div className="mb-4">
               <h2 className="text-lg font-bold text-slate-900 dark:text-slate-100">Filtrar chamados</h2>
@@ -68,8 +68,10 @@ export default function Home() {
                 Busque pelo título e refine os resultados por status e prioridade.
               </p>
             </div>
-            <div className="flex justify-center gap-4 sm:flex-row items-center sm:items-end flex-col">
-              <Search value={search} onChange={setSearch} />
+            <div className="flex flex-col items-stretch justify-center gap-4 lg:flex-row lg:items-end">
+              <div className="min-w-0 flex-1">
+                <Search value={search} onChange={setSearch} />
+              </div>
               <Filters
                 status={status}
                 priority={priority}
@@ -91,7 +93,7 @@ export default function Home() {
             <InfoTable tickets={filteredTickets} />
           )}
         </div>
-      </div>
+      </main>
       <NewTicketModal
         isOpen={isNewTicketModalOpen}
         onClose={() => setIsNewTicketModalOpen(false)}

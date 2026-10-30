@@ -15,8 +15,8 @@ export default function Filters({
   onClear,
 }: FiltersProps) {
   return (
-    <div className="flex flex-col gap-3 sm:flex-row sm:items-end">
-      <label className="flex min-w-0 flex-1 flex-col gap-1.5 text-sm font-medium text-slate-600 dark:text-slate-300">
+    <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-2 lg:w-auto lg:min-w-[29rem] lg:grid-cols-3">
+      <label className="flex min-w-0 flex-col gap-1.5 text-sm font-medium text-slate-600 dark:text-slate-300">
         Status
         <select
           value={status}
@@ -30,7 +30,7 @@ export default function Filters({
         </select>
       </label>
 
-      <label className="flex min-w-0 flex-1 flex-col gap-1.5 text-sm font-medium text-slate-600 dark:text-slate-300">
+      <label className="flex min-w-0 flex-col gap-1.5 text-sm font-medium text-slate-600 dark:text-slate-300">
         Prioridade
         <select
           value={priority}
@@ -47,7 +47,7 @@ export default function Filters({
       <button
         type="button"
         onClick={onClear}
-        className="rounded-xl border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-600 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 dark:border-slate-700 dark:text-slate-300 dark:hover:border-blue-700 dark:hover:bg-blue-950/50 dark:hover:text-blue-300"
+        className="h-[46px] self-end whitespace-nowrap rounded-xl border border-slate-200 px-4 text-sm font-semibold text-slate-600 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500/10 dark:border-slate-700 dark:text-slate-300 dark:hover:border-blue-700 dark:hover:bg-blue-950/50 dark:hover:text-blue-300 sm:col-span-2 lg:col-span-1"
       >
         Limpar filtros
       </button>
