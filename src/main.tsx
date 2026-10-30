@@ -8,8 +8,8 @@ import App from './App.tsx'
 const queryClient = new QueryClient()
 
 async function enableMocking() {
-  const { worker } = await import("./mocks/browser");
-  return worker.start();
+  const { worker } = await import('./mocks/browser')
+  return worker.start({ onUnhandledRequest: 'error' })
 }
 
 enableMocking().then(() => {
@@ -20,5 +20,7 @@ enableMocking().then(() => {
         <Toaster position="top-right" richColors closeButton />
       </QueryClientProvider>
     </StrictMode>
-  );
-});
+  )
+}).catch((error: unknown) => {
+  console.error('Não foi possível iniciar o servidor mock dos chamados.', error)
+})

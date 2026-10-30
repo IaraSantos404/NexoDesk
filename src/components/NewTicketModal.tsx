@@ -135,7 +135,7 @@ export default function NewTicketModal({ isOpen, onClose }: NewTicketModalProps)
             </div>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2">
             <SelectField id="ticket-sector" label="Setor *" error={errorMessage('sector')} {...register('sector')}>
               <option value="">Selecione</option>
               <option value="TI">TI</option>
@@ -149,11 +149,6 @@ export default function NewTicketModal({ isOpen, onClose }: NewTicketModalProps)
               <option value="Alta">Alta</option>
               <option value="Média">Média</option>
               <option value="Baixa">Baixa</option>
-            </SelectField>
-            <SelectField id="ticket-status" label="Status" error={errorMessage('status')} {...register('status')}>
-              <option value="Aberto">Aberto</option>
-              <option value="Em andamento">Em andamento</option>
-              <option value="Concluído">Concluído</option>
             </SelectField>
           </div>
 

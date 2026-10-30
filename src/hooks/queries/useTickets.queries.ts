@@ -47,6 +47,15 @@ async function request<T>(url: string, options?: RequestInit): Promise<T> {
   }
 
   if (response.status === 204) return undefined as T
+
+  const contentType = response.headers.get('content-type') ?? ''
+  if (!contentType.includes('application/json')) {
+    throw new TicketsApiError(
+      'A API retornou uma resposta inválida. Verifique se o servidor de chamados está disponível.',
+      502,
+    )
+  }
+
   return response.json() as Promise<T>
 }
 
